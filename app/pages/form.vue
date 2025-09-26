@@ -37,7 +37,7 @@
                 <div class="grid grid-cols md:grid-cols-2 grid-cols-1 gap-x-8 gap-y-7">
                     <div>
                         <DropdownInput :label="'Выберите направление  вашего проекта'" :options="dropdownList"
-                            v-model="dropdownVal" />
+                            v-model="dropdownDirection" />
                     </div>
 
                     <div>
@@ -66,7 +66,7 @@
 
                     <div>
                         <DropdownInput :label="'Стадия готовности решения или продукта'" :options="dropdownList"
-                            v-model="dropdownVal" />
+                            v-model="dropdownStatus" />
                     </div>
 
                     <div>
@@ -189,7 +189,8 @@ const dropdownList = [
     { label: `1`, value: `1` },
     { label: `2`, value: `2` },
 ];
-const dropdownVal = ref();
+const dropdowndirection = ref(null);
+const dropdownStatus = ref(null)
 const presentationBullets = [
     "Проблема. Какую задачу решает ваш продукт/продукты и для каких сегментов?",
     "Решение. Что из себя представляет ваш продукт? Как решает указанную проблему?",

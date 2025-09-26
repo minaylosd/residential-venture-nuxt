@@ -67,13 +67,13 @@ import { useDropDownInputCloseSync } from '../composables/dropdownInputCloseSync
 
 const props = defineProps({
   label: String,
-  value: [String, Number, Boolean, Object],
+  modelValue: [String, Number, Boolean, Object],
   options: Array,
   disabled: Boolean,
   searchable: Boolean,
 });
 
-const emit = defineEmits(['input']);
+const emit = defineEmits(['update:modelValue']);
 const isSet = ref(false);
 const isDropdownShown = ref(false);
 const searchQuery = ref('');
@@ -82,7 +82,7 @@ const dropdownContainer = ref(null);
 const { registerCloseCallback, closeLastDropdown } = useDropDownInputCloseSync();
 
 const selectedOption = computed(() => {
-  return props.options.find(option => option.value === props.value) || { label: '', value: null };
+  return props.options.find(option => option.value === props.modelValue) || { label: '', value: null };
 });
 
 const filteredOptions = computed(() => {
@@ -92,15 +92,15 @@ const filteredOptions = computed(() => {
   return props.options.filter(option => option.label.toLowerCase().includes(searchQuery.value.toLowerCase()));
 });
 
-watch(() => props.value, (newValue) => {
-  isSet.value = !!newValue;
+watch(() => props.modelValue, (newValue) => {
+  isSet.value = newValue !== null && newValue !== undefined;
 }, { immediate: true });
 
 const onClear = () => {
   isSet.value = false;
   isDropdownShown.value = false;
   searchQuery.value = '';
-  emit('input', null);
+  emit('update:modelValue', null);
   closeLastDropdown();
 };
 
@@ -136,9 +136,11 @@ onBeforeUnmount(() => {
 });
 
 function setType(option) {
-  emit('input', option.value);
+  console.log(`option: ${option.value}`);
+  emit('update:modelValue', option.value);
+  isSet.value = true;
   nextTick(() => {
-    isDropdownShown.value = false; // Закрываем dropdown после обновления
+    isDropdownShown.value = false;
   });
   closeLastDropdown();
 }
