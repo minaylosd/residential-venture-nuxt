@@ -13,7 +13,7 @@
             <li class="flex">
               <a
                 class="text-base text-center font-normal font-text text-greyfooter"
-                href="/pages/agreement"
+                href="/"
                 target="_blank"
               >
                 Согласие на обработку персональных данных
