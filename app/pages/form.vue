@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col lg:flex-row py-24 justify-between lg:gap-[168px] gap-11">
+    <div class="flex flex-col lg:flex-row py-24 justify-between lg:gap-[168px] gap-11 px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full">
         <h1 class="font-wide font-medium text-txt text-4xl leading-none uppercase w-[264px]">Заявка на участие</h1>
 
         <form class="flex flex-col gap-[72px] grow">
@@ -167,10 +167,8 @@
                     Подать заявку
                 </button>
             </div>
-
         </form>
     </div>
-
 </template>
 
 <script setup>
