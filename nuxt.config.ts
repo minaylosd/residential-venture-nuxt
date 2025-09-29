@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: [
-        '/', '/blog', '/form', '/resident-program', '/venture-club', '/cases', '/articles', '/news'
+        '/', '/blog', '/form', '/resident-program', '/venture-club'
       ],
     },
   },
