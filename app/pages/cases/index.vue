@@ -11,11 +11,15 @@
                 </h1>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
-                <NuxtLink v-for="(item, i) in cases" :key="i" :to="item.link" class="appear-up relative rounded-3xl overflow-hidden bg-tertiary">
-                    <img :src="item.img" class="w-full h-auto object-cover rounded-3xl">
+                <NuxtLink v-for="(item, i) in cases" :key="i" :to="item.link"
+                    class="appear-up relative rounded-3xl overflow-hidden bg-tertiary card">
+                    <div class="w-full h-auto overflow-hidden rounded-3xl">
+                        <img :src="item.img" class="w-full h-auto object-cover rounded-3xl card-scale">
+                    </div>
                     <div class="px-6 pt-4 pb-6 w-full h-[92px]">
-                        <div  class="flex w-full justify-between gap-4">
-                            <span class="font-wide font-medium md:text-xl text-sm leading-6 text-txt">{{ item.text }}</span>
+                        <div class="flex w-full justify-between gap-4">
+                            <span class="font-wide font-medium md:text-xl text-sm leading-6 text-txt">{{ item.text
+                                }}</span>
                             <div class="py-4 px-[19px] w-fit">
                                 <ChevronRight :color="'#1d2023'" />
                             </div>
@@ -32,12 +36,42 @@
 import Arrow from "~/components/icons/Arrow.vue";
 import SubscriptionForm from "~/components/SubscriptionForm.vue";
 import ChevronRight from "~/components/icons/ChevronRight.vue";
-import { onMounted, onBeforeUnmount } from 'vue'
+import { onMounted, onBeforeUnmount, nextTick } from 'vue'
 import { gsap } from "gsap";
+
+function initAnimations() {
+    const cards = document.querySelectorAll(".card");
+    gsap.fromTo(cards, { opacity: 0, y: 100 }, { opacity: 1, y: 0, ease: "power4.out", stagger: 0.1, duration: 2 });
+
+    cards.forEach((card) => {
+        card.addEventListener("mouseenter", handleMouseEnter);
+        card.addEventListener("mouseleave", handleMouseLeave);
+    });
+}
+
+function handleMouseEnter(e) {
+    const el = e.currentTarget.querySelectorAll(".card-scale");
+    gsap.to(el, { scale: 1.07, ease: "power4.out", duration: 1.2 });
+}
+
+function handleMouseLeave(e) {
+    const el = e.currentTarget.querySelectorAll(".card-scale");
+    gsap.to(el, { scale: 1, ease: "power4.out", duration: 1.2 });
+}
+
+function removeListeners() {
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card) => {
+        card.removeEventListener("mouseenter", handleMouseEnter);
+        card.removeEventListener("mouseleave", handleMouseLeave);
+    });
+}
 
 let observer = null;
 
-onMounted(() => {
+onMounted(async () => {
+    await nextTick();
+    initAnimations();
     const sections = document.querySelectorAll("section");
 
     observer = new IntersectionObserver((entries) => {
@@ -67,6 +101,7 @@ onBeforeUnmount(() => {
     if (observer) {
         observer.disconnect();
     }
+    removeListeners();
 });
 
 const cases = [

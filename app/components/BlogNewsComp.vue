@@ -1,5 +1,5 @@
 <template>
-    <section class="w-full lg:py-24 py-10">
+    <section class="w-full">
         <div class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full flex flex-col gap-8">
             <h2 class="appear-up font-wide font-medium text-txt lg:text-4xl text-3xl leading-none uppercase">{{ props.heading }}</h2>
             <div class="flex flex-col gap-8 w-full">
@@ -18,8 +18,9 @@
                     
                 </NuxtLink>
             </div>
-            <NuxtLink to="/news" class="appear-up font-wide font-medium text-xl leading-6 text-brand w-fit mx-auto">
+            <NuxtLink to="/news" class="group appear-up font-wide font-medium text-xl leading-6 text-brand w-fit mx-auto relative overflow-hidden">
                 Все новости
+                <div class="divider absolute bottom-0 right-full h-[1px] w-full bg-brand transition-all duration-300 ease-out group-hover:right-0"></div>
             </NuxtLink>
         </div>
     </section>
