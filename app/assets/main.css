@@ -142,6 +142,10 @@
   --font-text: "MTS Text";
 }
 
+.appear-up {
+  opacity: 0;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

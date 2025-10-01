@@ -1,24 +1,24 @@
 <template>
-    <section class="w-full py-24">
+    <section class="w-full lg:py-24 py-10">
         <div class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full flex flex-col gap-8">
-            <h2 class="font-wide font-medium text-txt text-4xl leading-none uppercase">{{ props.heading }}</h2>
+            <h2 class="appear-up font-wide font-medium text-txt lg:text-4xl text-3xl leading-none uppercase">{{ props.heading }}</h2>
             <div class="flex flex-col gap-8 w-full">
-                <NuxtLink v-for="(item, i) in news" :key="i" :to="item.link" class="relative rounded-3xl w-full overflow-hidden flex items-center gap-4 pr-6 bg-tertiary">
+                <NuxtLink v-for="(item, i) in news" :key="i" :to="item.link" class="appear-up relative rounded-3xl w-full overflow-hidden flex items-center gap-4 pr-6 bg-tertiary">
                     <div class="flex items-center gap-4">
                        <img :src="item.img" class="object-cover rounded-3xl w-[292px] h-[127px]"> 
                     </div>
                     
                     <div class="flex items-start justify-between w-full">
                         <div class="flex flex-col gap-4 max-w-[630px]">
-                            <h3 class="font-wide font-medium text-xl leading-6 text-txt">{{ item.text }}</h3>
-                            <p class="text-sm font-normal font-compact text-greytxt">{{ item.date }}</p>
+                            <h3 class="font-wide font-medium lg:text-xl text-sm lg:leading-6 text-txt">{{ item.text }}</h3>
+                            <p class="text-sm font-normal font-compact text-greytxt hidden lg:block">{{ item.date }}</p>
                        </div>
-                       <p class="py-2 px-4 bg-brand font-text font-normal text-sm text-white h-fit rounded-2xl">Новости</p>
+                       <p class="py-2 px-4 bg-brand font-text font-normal text-sm text-white h-fit rounded-2xl hidden lg:block">Новости</p>
                     </div>
                     
                 </NuxtLink>
             </div>
-            <NuxtLink to="/news" class="font-wide font-medium text-xl leading-6 text-brand w-fit mx-auto">
+            <NuxtLink to="/news" class="appear-up font-wide font-medium text-xl leading-6 text-brand w-fit mx-auto">
                 Все новости
             </NuxtLink>
         </div>

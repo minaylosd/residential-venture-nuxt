@@ -1,36 +1,36 @@
 <template>
-    <div class="flex flex-col gap-24 pb-24">
+    <div class="flex flex-col lg:gap-24 gap-10 lg:pb-24 pb-10">
         <section
             class="relative overflow-hidden flex flex-col w-full">
             <img class="absolute inset-0 object-cover w-full h-full" src="/bggrad.png" alt="">
-            <div class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full py-24 grid grid-cols-2">
+            <div class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full lg:py-24 py-10 grid grid-cols-2">
                 <h1
-                    class="relative z-10 font-wide font-medium text-white text-[56px] leading-none uppercase mb-4 col-span-2">
+                    class="appear-up relative z-10 font-wide font-medium text-white lg:text-[56px] text-3xl leading-none uppercase mb-4 col-span-2">
                     МАСШТАБИРУЙ СВОЙ B2C БИЗНЕС С ВОЗМОЖНОСТЯМИ МТС
                 </h1>
                 <div class="relative z-10 mb-48">
 
-                    <p class="font-normal leading-normal text-white text-2xl font-compact">
+                    <p class="appear-up font-normal leading-normal text-white text-2xl font-compact">
                         Получай инсайты о своей ЦА и протестируй новые маркетинговые гипотезы
                     </p>
                 </div>
 
-                <div class="row-span-2 relative w-full h-full">
-                    <img class="absolute top-1/2 right-0 -translate-y-1/2 w-full object-cover" src="/rocket.png">
+                <div class="lg:row-span-2 lg:relative w-full h-full">
+                    <img class="absolute top-1/2 right-0 -translate-y-1/4 lg:-translate-y-1/2 w-full object-cover" src="/rocket.png">
                 </div>
 
                 <NuxtLink to="/form" target="_blank"
-                    class="font-wide font-bold text-white text-xs uppercase py-[26px] px-[92px] rounded-[20px] bg-brand tracking-[0.05em] w-fit relative z-10">
+                    class="appear-up font-wide font-bold text-white text-xs uppercase py-[26px] px-[92px] rounded-[20px] bg-brand tracking-[0.05em] w-fit relative z-10">
                     Подать заявку
                 </NuxtLink>
             </div>
         </section>
 
         <section class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full">
-            <h2 class="font-wide font-medium text-txt text-4xl leading-none uppercase mb-8">Что даем</h2>
+            <h2 class="appear-up font-wide font-medium text-txt lg:text-4xl text-3xl leading-none uppercase mb-8">Что даем</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-8 w-full">
                 <div v-for="(item, i) in features" :key="i"
-                    class="relative rounded-3xl bg-tertiary flex flex-col gap-12 w-full h-full p-6">
+                    class="appear-up relative rounded-3xl bg-tertiary flex flex-col gap-12 w-full h-full p-6">
                     <img :src="item.icon" class="w-16 h-16 object-cover">
                     <div>
                         <h3 class="font-wide font-medium text-txt text-xl leading-7 mb-4">{{ item.heading }}</h3>
@@ -41,10 +41,10 @@
         </section>
 
         <section class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full">
-            <h2 class="font-wide font-medium text-txt text-4xl leading-none uppercase mb-8">Требования</h2>
+            <h2 class="appear-up font-wide font-medium text-txt lg:text-4xl text-3xl leading-none uppercase mb-8">Требования</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-8 w-full">
                 <div v-for="(item, i) in requirements" :key="i"
-                    class="rounded-3xl bg-tertiary flex flex-col gap-12 w-full p-6 overflow-hidden relative h-[420px]">
+                    class="appear-up rounded-3xl bg-tertiary flex flex-col gap-12 w-full p-6 overflow-hidden relative h-[420px]">
 
                     <div>
                         <h3 class="font-wide font-medium text-txt text-[32px] leading-9 mb-4">{{ item.heading }}</h3>
@@ -59,11 +59,11 @@
         <AccordeonCard />
 
         <section class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full flex flex-col gap-8 items-center">
-            <p class="font-wide font-medium text-txt text-[72px] leading-none uppercase relative z-10 text-center">Начни
+            <p class="appear-up font-wide font-medium text-txt lg:text-[72px] text-xl leading-none uppercase relative z-10 text-center">Начни
                 коммерческое сотрудничество с МТС</p>
 
             <NuxtLink
-                class="font-wide font-bold text-white text-xs uppercase py-[26px] px-[92px] rounded-[20px] bg-brand tracking-[0.05em] w-fit"
+                class="appear-up font-wide font-bold text-white text-xs uppercase py-[26px] px-[92px] rounded-[20px] bg-brand tracking-[0.05em] w-fit"
                 to="/form">
                 Подать заявку
             </NuxtLink>
@@ -73,6 +73,43 @@
 
 <script setup>
 import AccordeonCard from '~/components/AccordeonCard.vue';
+import { onMounted, onBeforeUnmount } from 'vue'
+import { gsap } from "gsap";
+
+let observer = null;
+
+onMounted(() => {
+    const sections = document.querySelectorAll("section");
+
+    observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const appearEls = entry.target.querySelectorAll(".appear-up");
+
+                if (appearEls.length > 0) {
+                    gsap.fromTo(appearEls,
+                        { opacity: 0, y: 100 },
+                        { opacity: 1, y: 0, duration: 1, stagger: 0.07, ease: "power2.out", clearProps: "transform" }
+                    );
+                }
+
+                // После анимации больше не нужно следить за этой секцией
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1 // секция считается видимой при 10% попадания
+    });
+
+    sections.forEach((section) => observer.observe(section));
+});
+
+onBeforeUnmount(() => {
+    if (observer) {
+        observer.disconnect();
+    }
+});
+
 const features = [
     {
         heading: "Регулярный отчет с маркетинговыми гипотезами",
