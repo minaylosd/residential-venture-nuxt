@@ -1,24 +1,26 @@
 <template>
     <div class="flex flex-col gap-10 pb-10 lg:gap-24 lg:pb-24">
-        <section class="relative overflow-hidden flex flex-col w-full">
+        <section class="relative overflow-hidden flex flex-col w-full min-h-svh lg:h-auto">
             <img class="absolute inset-0 object-cover w-full h-full" src="/bggrad.png" alt="">
             <div
-                class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full lg:py-24 py-10 grid grid-cols-1 lg:grid-cols-2 gap-y-48">
+                class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full lg:py-24 py-10 grid grid-cols-1 lg:grid-cols-2 lg:gap-y-48 gap-y-10">
                 <div class="relative z-10">
-                    <h1 class="appear-up font-wide font-medium text-white text-[56px] leading-none uppercase mb-4">
+                    <h1
+                        class="appear-up font-wide font-medium text-white lg:text-[56px] text-4xl leading-none uppercase mb-4">
                         РАЗВИВАЙ СВОЙ
                         БИЗНЕС С МТС</h1>
-                    <p class="appear-up font-normal leading-normal text-white text-2xl font-compact">
+                    <p class="appear-up font-normal leading-normal text-white lg:text-2xl text-lg font-compact">
                         Получи инвестиции и заключи контракт с крупной корпорацией
                     </p>
                 </div>
 
-                <div class="row-span-2 lg:relative w-full h-full absolute">
-                    <img class="absolute top-1/2 right-0 -translate-y-1/2 w-full object-cover" src="/mainPoster.png">
+                <div class="row-span-2 relative w-full h-full">
+                    <img class="lg:absolute lg:top-1/2 lg:right-0 lg:-translate-y-1/2 w-full object-cover"
+                        src="/mainPoster.png">
                 </div>
 
                 <NuxtLink to="/form" target="_blank"
-                    class="appear-up font-wide font-bold text-white text-xs uppercase py-[26px] px-[92px] rounded-[20px] bg-brand tracking-[0.05em] w-fit relative z-10">
+                    class="appear-up font-wide font-bold text-white text-xs uppercase py-[26px] px-[92px] rounded-[20px] bg-brand tracking-[0.05em] lg:w-fit w-full relative z-10 flex justify-center">
                     Подать заявку
                 </NuxtLink>
             </div>
@@ -46,13 +48,13 @@
         <section ref="wrapper" class="w-full max-w-[1336px] px-5 lg:px-9 mx-auto">
             <h2 class="appear-up font-wide font-medium text-txt text-4xl leading-none uppercase mb-8">
                 Наши цифры</h2>
-            <div class="flex w-full md:h-[395px] relative">
+            <div class="flex w-full md:h-[395px] relative justify-center">
                 <div ref="swiperRef"
-                    class="flex flex-col md:flex-row md:items-center md:gap-24 gap-10 md:absolute md:top-0 md:left-0">
-                    <div v-for="(number, i) in numbers" :key="i" class="appear-up">
+                    class="flex flex-col md:flex-row items-center md:gap-24 gap-10 md:absolute md:top-0 md:left-0">
+                    <div v-for="(number, i) in numbers" :key="i" :class="[ i == 0 ? 'md:mr-20' : '', 'appear-up relative mb-40']">
                         <img :src="number.img"
-                            class="w-[245px] min-w-[245px] object-cover aspect-square rounded-3xl -mb-10" alt="">
-                        <div>
+                            class="lg:w-[245px] min-w-[245px] w-full object-cover aspect-square rounded-3xl -mb-10" alt="">
+                        <div class="absolute left-0 bottom-2 translate-y-full">
                             <p class="flex flex-col gap-4 font-compact font-normal text-txt text-xl leading-none">
                                 <span class="font-wide font-medium text-brand text-[128px] leading-none">{{ number.value
                                     }}</span>
@@ -68,17 +70,23 @@
         <CasesGrid />
         <BlogNewsComp :heading="'Блог'" />
 
-        <a href="/"
-            class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full lg:rounded-[48px] rounded-2xl relative overflow-hidden lg:py-[55px] py-6">
-            <img src="/bottom-poster-grad.jpg"
-                class="absolute w-full h-full top-0 left-0 lg:rounded-[48px] rounded-2xl object-cover" alt="">
-            <p class="font-wide font-medium text-white lg:text-[72px] text-xl leading-none uppercase relative z-10">
-                Больше новостей
-                в нашем телеграм</p>
-            <img src="/bottom-poster.png"
-                class="absolute top-1/2 right-0 -translate-y-1/2 lg:w-[372px] w-[180px] aspect-square object-cover"
-                alt="">
-        </a>
+        <div class="w-full max-w-[1336px] px-5 lg:px-9 mx-auto">
+            <div class="flex w-full relative">
+                <a href="/"
+                    class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full lg:rounded-[48px] rounded-2xl relative overflow-hidden lg:py-[55px] py-6">
+                    <img src="/bottom-poster-grad.jpg"
+                        class="absolute w-full h-full top-0 left-0 lg:rounded-[48px] rounded-2xl object-cover" alt="">
+                    <p
+                        class="font-wide font-medium text-white lg:text-[72px] text-xl leading-none uppercase relative z-10">
+                        Больше новостей
+                        в нашем телеграм</p>
+                    <img src="/bottom-poster.png"
+                        class="absolute top-1/2 -right-8 lg:right-0 -translate-y-1/2 lg:w-[372px] w-[180px] aspect-square object-cover"
+                        alt="">
+                </a>
+            </div>
+        </div>
+
     </div>
 </template>
 

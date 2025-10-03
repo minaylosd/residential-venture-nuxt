@@ -7,7 +7,7 @@
 
                 <div class="relative z-20">
                     <h1
-                        class="relative z-10 font-wide font-medium text-white lg:text-[56px] text-3xl leading-none uppercase mb-4 col-span-2 appear-up">
+                        class="relative z-10 font-wide font-medium text-white lg:text-[56px] text-4xl leading-none uppercase mb-4 col-span-2 appear-up">
                         Венчурный клуб
                     </h1>
                     <p class="font-normal leading-normal text-white text-2xl font-compact appear-up">

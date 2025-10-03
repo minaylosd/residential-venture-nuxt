@@ -1,26 +1,26 @@
 <template>
     <div class="flex flex-col lg:gap-24 gap-10 lg:pb-24 pb-10">
         <section
-            class="relative overflow-hidden flex flex-col w-full">
+            class="relative overflow-hidden flex flex-col w-full min-h-svh lg:h-auto">
             <img class="absolute inset-0 object-cover w-full h-full" src="/bggrad.png" alt="">
-            <div class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full lg:py-24 py-10 grid grid-cols-2">
+            <div class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full lg:py-24 py-10 grid lg:grid-cols-2 grid-cols-1">
                 <h1
-                    class="appear-up relative z-10 font-wide font-medium text-white lg:text-[56px] text-3xl leading-none uppercase mb-4 col-span-2">
+                    class="appear-up relative z-10 font-wide font-medium text-white lg:text-[56px] text-3xl leading-none uppercase mb-4 lg:col-span-2">
                     МАСШТАБИРУЙ СВОЙ B2C БИЗНЕС С ВОЗМОЖНОСТЯМИ МТС
                 </h1>
-                <div class="relative z-10 mb-48">
+                <div class="relative z-10 lgmb-48">
 
                     <p class="appear-up font-normal leading-normal text-white text-2xl font-compact">
                         Получай инсайты о своей ЦА и протестируй новые маркетинговые гипотезы
                     </p>
                 </div>
 
-                <div class="lg:row-span-2 lg:relative w-full h-full">
-                    <img class="absolute top-1/2 right-0 -translate-y-1/4 lg:-translate-y-1/2 w-full object-cover" src="/rocket.png">
+                <div class="lg:row-span-2 relative w-full h-full">
+                    <img class="lg:absolute lg:top-1/2 lg:right-0 lg:-translate-y-1/2 w-full object-cover" src="/rocket.png">
                 </div>
 
                 <NuxtLink to="/form" target="_blank"
-                    class="appear-up font-wide font-bold text-white text-xs uppercase py-[26px] px-[92px] rounded-[20px] bg-brand tracking-[0.05em] w-fit relative z-10">
+                    class="appear-up font-wide font-bold text-white text-xs uppercase py-[26px] px-[92px] rounded-[20px] bg-brand tracking-[0.05em] lg:w-fit w-full flex justify-center relative z-10">
                     Подать заявку
                 </NuxtLink>
             </div>
