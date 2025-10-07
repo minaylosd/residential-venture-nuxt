@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col gap-10 pb-10 lg:gap-24 lg:pb-24">
-        <section class="relative overflow-hidden flex flex-col w-full min-h-svh lg:h-auto">
+        <section class="relative overflow-hidden flex flex-col w-full min-h-svh lg:min-h-[656px]">
             <img class="absolute inset-0 object-cover w-full h-full" src="/bggrad.png" alt="">
             <div
                 class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full lg:py-24 py-10 grid grid-cols-1 lg:grid-cols-2 lg:gap-y-48 gap-y-10">

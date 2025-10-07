@@ -1,14 +1,14 @@
 <template>
     <div class="flex flex-col lg:gap-24 gap-10 lg:pb-24 pb-10">
         <section
-            class="relative overflow-hidden flex flex-col w-full min-h-svh lg:h-auto">
+            class="relative overflow-hidden flex flex-col w-full min-h-svh lg:min-h-[656px]">
             <img class="absolute inset-0 object-cover w-full h-full" src="/bggrad.png" alt="">
             <div class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full lg:py-24 py-10 grid lg:grid-cols-2 grid-cols-1">
                 <h1
                     class="appear-up relative z-10 font-wide font-medium text-white lg:text-[56px] text-3xl leading-none uppercase mb-4 lg:col-span-2">
                     МАСШТАБИРУЙ СВОЙ B2C БИЗНЕС С ВОЗМОЖНОСТЯМИ МТС
                 </h1>
-                <div class="relative z-10 lgmb-48">
+                <div class="relative z-10 lg:mb-48">
 
                     <p class="appear-up font-normal leading-normal text-white text-2xl font-compact">
                         Получай инсайты о своей ЦА и протестируй новые маркетинговые гипотезы
