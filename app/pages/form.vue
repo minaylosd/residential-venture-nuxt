@@ -1,8 +1,8 @@
 <template>
-    <div class="flex flex-col lg:flex-row py-24 justify-between lg:gap-[168px] gap-11 px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full">
-        <h1 class="font-wide font-medium text-txt text-4xl leading-none uppercase w-[264px]">Заявка на участие</h1>
+    <div class="flex flex-col lg:flex-row py-24 justify-between lg:gap-[10.5rem] gap-11 px-5 mx-auto lg:px-9 md:max-w-[83.5rem] w-full">
+        <h1 class="font-wide font-medium text-txt text-4xl leading-none uppercase w-[16.5rem]">Заявка на участие</h1>
 
-        <form class="flex flex-col gap-[72px] grow">
+        <form class="flex flex-col gap-[4.5rem] grow">
             <div>
                 <h2 class="font-compact font-medium text-txt text-2xl leading-7 mb-4">Контактная информация</h2>
                 <div class="grid grid-cols md:grid-cols-2 grid-cols-1 gap-x-8 gap-y-7">
@@ -124,7 +124,7 @@
                 <div class="flex flex-col w-full h-full gap-1">
                     <input ref="fileInput" :key="fileInputKey" type="file" accept=".txt,.csv,.xls" class="hidden"
                         @change="handleFileUpload">
-                    <div :class="['relative flex-col gap-1 justify-center items-center flex px-4 py-6 bg-[#f2f3f7] rounded-[20px] border border-dashed border-divider/50 cursor-pointer', { 'drag-over': isDragging }]"
+                    <div :class="['relative flex-col gap-1 justify-center items-center flex px-4 py-6 bg-[#f2f3f7] rounded-[1.25rem] border border-dashed border-divider/50 cursor-pointer', { 'drag-over': isDragging }]"
                         @click="triggerFileInput" @dragover.prevent @dragenter.prevent="handleDragEnter"
                         @dragleave.prevent="handleDragLeave" @drop.prevent="handleFileDrop">
                         <UploadIcon />
@@ -152,7 +152,7 @@
                     </div>
                 </div>
 
-                <p class="font-compact font-normal text-sm leading-[18px] text-greytxt">
+                <p class="font-compact font-normal text-sm leading-[1.125rem] text-greytxt">
                     Обработка полученных данных ведется в соответствии с <a class="text-[#0070E5]" href="/">Политикой "Обработка персональных данных" в
                         ПАО "МТС",</a> <a class="text-[#0070E5]" href="/">Политикой "Обработка персональных данных в ООО "Экосистема МТС",</a> а
                     также в рамках <a class="text-[#0070E5]" href="/">Правил участия в проекте "Резидентство MTS StartUp Hub".</a>
@@ -163,7 +163,7 @@
                         href="https://startup.mts.ru/third_persons-page">https://startup.mts.ru/third_persons-page.</a>
                 </p>
 
-                <button class="font-wide font-bold text-white text-xs uppercase py-[26px] px-[92px] rounded-[20px] bg-brand tracking-[0.05em] w-fit" to="/">
+                <button class="font-wide font-bold text-white text-xs uppercase py-[1.625rem] px-[5.75rem] rounded-[1.25rem] bg-brand tracking-[0.05em] w-fit" to="/">
                     Подать заявку
                 </button>
             </div>

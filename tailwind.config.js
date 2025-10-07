@@ -38,6 +38,7 @@ module.exports = {
       },
       fontSize: {
         '2.5': "0.625rem",
+        '14': "3.5rem",
         '17': "1.0625rem",
         'heading': "2.75rem",
       },
@@ -55,6 +56,8 @@ module.exports = {
         '91': '22.75rem',
         '100': '25rem',
         '128': '32rem',
+        "164": "41rem",
+        '334': "83.5rem",
         '388': '97rem',
       },
       boxShadow: {

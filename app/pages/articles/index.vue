@@ -1,6 +1,6 @@
 <template>
     <div class="w-full lg:py-24 py-10 flex flex-col gap-10 lg:gap-24">
-        <section class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full">
+        <section class="px-5 mx-auto lg:px-9 md:max-w-[83.5rem] w-full">
             <div class="flex items-center gap-8 mb-8">
                 <NuxtLink to="/blog"
                     class="appear-up rounded-full cursor-pointer flex items-center justify-center bg-tertiary w-16 h-16">

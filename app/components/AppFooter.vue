@@ -1,6 +1,6 @@
 <template>
   <footer class="w-full pb-6 bg-tertiary">
-    <div class="flex flex-col w-full px-5 mx-auto lg:px-9 md:max-w-[1336px]">
+    <div class="flex flex-col w-full px-5 mx-auto lg:px-9 md:max-w-[83.5rem]">
       <div class="grid lg:grid-cols-5 grid-cols-1 gap-8 py-6">
         <div class="flex flex-col gap-4">
           <h3 class="font-compact font-normal text-17 leading-6 text-txt">Стартапам</h3>

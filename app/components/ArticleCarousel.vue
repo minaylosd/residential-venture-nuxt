@@ -1,5 +1,5 @@
 <template>
-    <section class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full">
+    <section class="px-5 mx-auto lg:px-9 md:max-w-[83.5rem] w-full">
         <div class="flex items-center justify-between mb-8">
             <h2 class="appear-up font-wide font-medium text-txt lg:text-4xl text-3xl leading-none uppercase">
                 Анализ зарубежных единорогов
@@ -35,12 +35,12 @@
 
                 <h3 class="font-compact font-medium text-txt text-17 leading-6 mb-2">{{ article.heading }}</h3>
 
-                <p class="flex flex-col gap-4 font-text font-normal text-greytxt text-sm clamped-text mb-[22px]">
+                <p class="flex flex-col gap-4 font-text font-normal text-greytxt text-sm clamped-text mb-[1.375rem]">
                     {{ article.txt }}
                 </p>
 
                 <NuxtLink :to="article.link"
-                    class="font-wide font-bold text-white text-[10px] leading-3 uppercase py-2.5 px-[18px] rounded-xl bg-brand w-full flex items-center justify-center">
+                    class="font-wide font-bold text-white text-[0.625rem] leading-3 uppercase py-2.5 px-[1.125rem] rounded-xl bg-brand w-full flex items-center justify-center">
                     Подробнее
                 </NuxtLink>
 

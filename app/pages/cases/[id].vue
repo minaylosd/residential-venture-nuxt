@@ -2,7 +2,7 @@
     <section class="relative overflow-hidden flex flex-col w-full">
         <img class="object-cover w-full lg:h-full h-[50vh]" src="/article-poster.jpg" alt="">
         <div class="absolute inset-0 bg-[#5a0206]/75"></div>
-        <div class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
+        <div class="px-5 mx-auto lg:px-9 md:max-w-[83.5rem] w-full absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
             <div class="flex items-center gap-8 mb-8">
                 <NuxtLink to="/cases"
                     class="appear-up rounded-full cursor-pointer flex items-center justify-center bg-tertiary lg:w-16 lg:h-16 lg:min-h-16 lg:min-w-16 w-12 h-12 min-w-12 min-h-12">
@@ -14,7 +14,7 @@
             </div>
         </div>
     </section>
-    <section class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full flex flex-col lg:gap-24 lg:py-24 gap-10 py-10">
+    <section class="px-5 mx-auto lg:px-9 md:max-w-[83.5rem] w-full flex flex-col lg:gap-24 lg:py-24 gap-10 py-10">
         <p class="appear-up font-wide font-medium text-greytxt text-xl leading-6">
             До 25% бронирований в отелях так и не доходят до заезда гостей. А это значит — недополученная выручка,
             пустующие номера и потерянные бюджеты. Стартап Data.Forecast, победитель MTS Travel Accelerator, решил
@@ -23,7 +23,7 @@
         </p>
 
         <div>
-            <h2 class="appear-up font-wide font-medium text-txt text-[32px] leading-9 mb-8">Подробнее про Data.Forecast</h2>
+            <h2 class="appear-up font-wide font-medium text-txt text-[2rem] leading-9 mb-8">Подробнее про Data.Forecast</h2>
             <p class="appear-up font-compact font-normal text-17 leading-6 text-greytxt">Data.Forecast — первая российская
                 DeepTech-система предиктивной аналитики для гостиничного бизнеса. С помощью самообучающихся алгоритмов
                 она анализирует более 2 600 параметров, включая динамику бронирований, поведение пользователей на сайте,
@@ -33,7 +33,7 @@
         </div>
 
         <div>
-            <h2 class="appear-up font-wide font-medium text-txt text-[32px] leading-9 mb-8">Цель пилота</h2>
+            <h2 class="appear-up font-wide font-medium text-txt text-[2rem] leading-9 mb-8">Цель пилота</h2>
             <p class="appear-up font-compact font-normal text-17 leading-6 text-greytxt">Задача пилота – протестировать, как
                 модель работает на реальных данных крупнейшего российского отельного консолидатора Bronevik.com .
                 Основной фокус – это вероятность отмены бронирования. Датасет включал более 914 тыс. заказов, а целью
@@ -42,7 +42,7 @@
         </div>
 
         <div>
-            <h2 class="appear-up font-wide font-medium text-txt text-[32px] leading-9 mb-8">Как строилась модель</h2>
+            <h2 class="appear-up font-wide font-medium text-txt text-[2rem] leading-9 mb-8">Как строилась модель</h2>
             <p class="appear-up font-compact font-normal text-17 leading-6 text-greytxt">Каждое бронирование анализировалось
                 отдельно, с учётом временных ограничений: алгоритм не получал доступ к информации из будущего. Модель
                 проходила валидацию на «скользящих окнах», чтобы избежать переобучения. Были отобраны признаки, не
@@ -51,7 +51,7 @@
         </div>
 
         <div>
-            <h2 class="appear-up font-wide font-medium text-txt text-[32px] leading-9 mb-8">Что показали результаты</h2>
+            <h2 class="appear-up font-wide font-medium text-txt text-[2rem] leading-9 mb-8">Что показали результаты</h2>
             <p class="appear-up font-compact font-normal text-17 leading-6 text-greytxt">AUC-метрика превысила 0.75 – это хороший
                 показатель качества для задач ранжирования по скоринговому баллу вероятности заезда с учетом
                 ограниченного пилотного датасета (период анализа охватывал 6 месяцев и не учитывал тип отеля, географию
@@ -63,20 +63,20 @@
         </div>
 
         <div>
-            <img src="/article-image.jpg" class="w-full h-auto object-cover rounded-[48px] mb-8" />
+            <img src="/article-image.jpg" class="w-full h-auto object-cover rounded-[3rem] mb-8" />
             <button
-                class="py-[18px] px-[108px] bg-txt font-wide font-bold text-xs text-white h-fit rounded-2xl uppercase tracking-[0.05em]">Поделиться</button>
+                class="py-[1.125rem] px-[6.75rem] bg-txt font-wide font-bold text-xs text-white h-fit rounded-2xl uppercase tracking-[0.05em]">Поделиться</button>
         </div>
     </section>
     <SubscriptionForm />
-    <div class="flex flex-col lg:flex-row items-center gap-8 px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full lg:py-24 py-10">
+    <div class="flex flex-col lg:flex-row items-center gap-8 px-5 mx-auto lg:px-9 md:max-w-[83.5rem] w-full lg:py-24 py-10">
         <NuxtLink :to="prevId ? `/cases/${prevId}` : '#'" class="flex items-center lg:gap-8 gap-4"
             :class="!prevId && 'pointer-events-none'">
             <div
                 class="rounded-full cursor-pointer flex items-center justify-center bg-tertiary w-12 h-12 min-w-12 min-h-12 lg:w-16 lg:h-16 lg:min-h-16 lg:min-w-16">
                 <Arrow />
             </div>
-            <span class="font-wide font-medium text-txt lg:text-[32px] text-2xl leading-9 transition-opacity duration-300"
+            <span class="font-wide font-medium text-txt lg:text-[2rem] text-2xl leading-9 transition-opacity duration-300"
                 :class="!prevId && 'opacity-25'">
                 Предыдущая статья
             </span>
@@ -84,7 +84,7 @@
 
         <NuxtLink :to="`/cases/${nextId}`" class="flex items-center lg:gap-8 gap-4">
             <span
-                class="font-wide font-medium text-txt lg:text-[32px] text-2xl leading-9 hover:text-brand transition-colors duration-500 ease-out">
+                class="font-wide font-medium text-txt lg:text-[2rem] text-2xl leading-9 hover:text-brand transition-colors duration-500 ease-out">
                 Следующая статья
             </span>
             <div

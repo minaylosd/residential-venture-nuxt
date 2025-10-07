@@ -1,15 +1,15 @@
 <template>
     <section class="w-full">
-        <div class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full flex flex-col gap-8">
+        <div class="px-5 mx-auto lg:px-9 md:max-w-[83.5rem] w-full flex flex-col gap-8">
             <h2 class="appear-up font-wide font-medium text-txt lg:text-4xl text-3xl leading-none uppercase">{{ props.heading }}</h2>
             <div class="flex flex-col gap-8 w-full">
                 <NuxtLink v-for="(item, i) in news" :key="i" :to="item.link" class="appear-up relative rounded-3xl w-full overflow-hidden flex items-center gap-4 pr-6 bg-tertiary">
                     <div class="flex items-center gap-4">
-                       <img :src="item.img" class="object-cover rounded-3xl w-[292px] h-[127px]"> 
+                       <img :src="item.img" class="object-cover rounded-3xl w-[18.25rem] h-[7.9375rem]"> 
                     </div>
                     
                     <div class="flex items-start justify-between w-full">
-                        <div class="flex flex-col gap-4 max-w-[630px]">
+                        <div class="flex flex-col gap-4 max-w-[39.375rem]">
                             <h3 class="font-wide font-medium lg:text-xl text-sm lg:leading-6 text-txt">{{ item.text }}</h3>
                             <p class="text-sm font-normal font-compact text-greytxt hidden lg:block">{{ item.date }}</p>
                        </div>
@@ -20,7 +20,7 @@
             </div>
             <NuxtLink to="/news" class="group appear-up font-wide font-medium text-xl leading-6 text-brand w-fit mx-auto relative overflow-hidden">
                 Все новости
-                <div class="divider absolute bottom-0 right-full h-[1px] w-full bg-brand transition-all duration-300 ease-out group-hover:right-0"></div>
+                <div class="divider absolute bottom-0 right-full h-[0.0625rem] w-full bg-brand transition-all duration-300 ease-out group-hover:right-0"></div>
             </NuxtLink>
         </div>
     </section>

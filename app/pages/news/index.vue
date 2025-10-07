@@ -1,6 +1,6 @@
 <template>
     <div class="w-full py-10 lg:py-24 flex flex-col gap-10 lg:gap-24">
-        <section class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full">
+        <section class="px-5 mx-auto lg:px-9 md:max-w-[83.5rem] w-full">
             <div class="flex items-center gap-8 mb-8">
                 <NuxtLink to="/blog"
                     class="appear-up rounded-full cursor-pointer flex items-center justify-center bg-tertiary w-16 h-16">
@@ -13,11 +13,11 @@
             <div class="flex flex-col gap-8 w-full">
                 <NuxtLink v-for="(item, i) in news" :key="i" :to="item.link" class="appear-up relative rounded-3xl w-full overflow-hidden flex items-center gap-4 pr-6 bg-tertiary">
                     <div class="flex items-center gap-4">
-                       <img :src="item.img" class="object-cover rounded-3xl w-[292px] h-[127px]"> 
+                       <img :src="item.img" class="object-cover rounded-3xl w-[18.25rem] h-[7.9375rem]"> 
                     </div>
                     
                     <div class="flex items-start justify-between w-full">
-                        <div class="flex flex-col gap-4 max-w-[630px]">
+                        <div class="flex flex-col gap-4 max-w-[39.375rem]">
                             <h3 class="font-wide font-medium lg:text-xl text-sm lg:leading-6 text-txt">{{ item.text }}</h3>
                             <p class="text-sm font-normal font-compact text-greytxt hidden lg:block">{{ item.date }}</p>
                        </div>

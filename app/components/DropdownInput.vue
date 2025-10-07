@@ -38,7 +38,7 @@
         <div
           v-for="(option) in filteredOptions"
           :key="option.value"
-          class="w-full py-[14px] px-1.5 cursor-pointer"
+          class="w-full py-[0.875rem] px-1.5 cursor-pointer"
           @click="setType(option)"
         >
           <div

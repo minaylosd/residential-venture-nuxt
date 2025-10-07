@@ -3,11 +3,11 @@
         <section class="relative overflow-hidden flex flex-col w-full">
             <img class="absolute inset-0 object-cover w-full h-full" src="/venture-grad.png" alt="">
             <div
-                class="px-5 mx-auto lg:px-9 md:max-w-[1336px] py-24 lg:py-0 w-full grid lg:grid-cols-2 grid-cols-1 items-center">
+                class="px-5 mx-auto lg:px-9 md:max-w-[83.5rem] py-24 lg:py-0 w-full grid lg:grid-cols-2 grid-cols-1 items-center">
 
                 <div class="relative z-20">
                     <h1
-                        class="relative z-10 font-wide font-medium text-white lg:text-[56px] text-4xl leading-none uppercase mb-4 col-span-2 appear-up">
+                        class="relative z-10 font-wide font-medium text-white lg:text-[3.5rem] text-4xl leading-none uppercase mb-4 col-span-2 appear-up">
                         Венчурный клуб
                     </h1>
                     <p class="font-normal leading-normal text-white text-2xl font-compact appear-up">
@@ -20,13 +20,13 @@
             </div>
         </section>
 
-        <section class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full">
+        <section class="px-5 mx-auto lg:px-9 md:max-w-[83.5rem] w-full">
             <h2 class="font-wide font-medium text-txt lg:text-4xl text-3xl leading-none uppercase mb-8 appear-up">Что даем</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-8 w-full">
                 <div v-for="(item, i) in features" :key="i"
                     class="appear-up relative rounded-3xl bg-tertiary flex flex-col gap-12 w-full h-full p-6">
                     <div
-                        class="px-[7px] py-1.5 w-8 h-8 flex items-center- justify-center rounded-lg bg-brand font-compact font-bold text-sm text-white">
+                        class="px-[0.4375rem] py-1.5 w-8 h-8 flex items-center- justify-center rounded-lg bg-brand font-compact font-bold text-sm text-white">
                         {{ '0' + (i + 1) }}</div>
                     <div>
                         <h3 class="font-wide font-medium text-txt text-2xl leading-7 mb-4">{{ item.heading }}</h3>
@@ -36,7 +36,7 @@
             </div>
         </section>
 
-        <section class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full">
+        <section class="px-5 mx-auto lg:px-9 md:max-w-[83.5rem] w-full">
             <h2 class="appear-up font-wide font-medium text-txt lg:text-4xl text-3xl leading-none uppercase mb-8">Для кого</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 items-start gap-8 w-full">
                 <div v-for="(item, i) in forWho" :key="i" @click="showVideo(item.videoSrc)"
@@ -53,7 +53,7 @@
             </div>
         </section>
 
-        <section class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full">
+        <section class="px-5 mx-auto lg:px-9 md:max-w-[83.5rem] w-full">
             <h2 class="appear-up font-wide font-medium text-txt lg:text-4xl text-3xl leading-none uppercase mb-8">Ценности для
                 участников клуба</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-8 w-full">
@@ -69,12 +69,12 @@
 
         <ArticleCarousel />
 
-        <section class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full">
+        <section class="px-5 mx-auto lg:px-9 md:max-w-[83.5rem] w-full">
             <h2 class="appear-up font-wide font-medium text-txt lg:text-4xl text-3xl leading-none uppercase mb-8">Встречи клуба в
                 неформальной обстановке</h2>
             <img @click="showVideo('https://customer-cb9bpih4mcvv374c.cloudflarestream.com/fe6a5825f75cdfe895b152294063eed6/downloads/default.mp4')"
                 src="/video-placeholder.jpg"
-                class="appear-up w-full h-auto object-cover lg:rounded-[48px] rounded-3xl cursor-pointer">
+                class="appear-up w-full h-auto object-cover lg:rounded-[3rem] rounded-3xl cursor-pointer">
         </section>
 
         <VideoOverlay v-if="isOverlayOpened" :close="closeOverlay" :videoSrc="videoSrc" />

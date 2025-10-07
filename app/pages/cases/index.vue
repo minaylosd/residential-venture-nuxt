@@ -1,6 +1,6 @@
 <template>
     <div class="w-full py-10 lg:py-24 flex flex-col gap-10 lg:gap-24">
-        <section class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full">
+        <section class="px-5 mx-auto lg:px-9 md:max-w-[83.5rem] w-full">
             <div class="flex items-center gap-8 mb-8">
                 <NuxtLink to="/blog"
                     class="appear-up rounded-full cursor-pointer flex items-center justify-center bg-tertiary w-16 h-16">
@@ -16,11 +16,11 @@
                     <div class="w-full h-auto overflow-hidden rounded-3xl">
                         <img :src="item.img" class="w-full h-auto object-cover rounded-3xl card-scale">
                     </div>
-                    <div class="px-6 pt-4 pb-6 w-full h-[92px]">
+                    <div class="px-6 pt-4 pb-6 w-full h-[5.75rem]">
                         <div class="flex w-full justify-between gap-4">
                             <span class="font-wide font-medium md:text-xl text-sm leading-6 text-txt">{{ item.text
                                 }}</span>
-                            <div class="py-4 px-[19px] w-fit">
+                            <div class="py-4 px-[1.1875rem] w-fit">
                                 <ChevronRight :color="'#1d2023'" />
                             </div>
                         </div>

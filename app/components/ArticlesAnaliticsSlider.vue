@@ -1,5 +1,5 @@
 <template>
-    <section class="px-5 mx-auto lg:px-9 md:max-w-[1336px] w-full">
+    <section class="px-5 mx-auto lg:px-9 md:max-w-[83.5rem] w-full">
         <div class="flex items-center justify-between mb-8">
             <h2 class="appear-up font-wide font-medium text-txt lg:text-4xl text-3xl leading-none uppercase">
                 Статьи и аналитика

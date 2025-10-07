@@ -1,6 +1,6 @@
 <template>
     <header class="fixed top-0 left-0 z-30 w-full bg-white lg:shadow-shadow py-3.5">
-        <div class="flex items-center justify-between px-5 mx-auto lg:px-9 md:max-w-[1336px]">
+        <div class="flex items-center justify-between px-5 mx-auto lg:px-9 md:max-w-[83.5rem]">
             <div class="flex items-center gap-11">
                 <NuxtLink class="flex items-center gap-2.5 font-compact text-xl leading-6 text-txt font-normal"
                     to="/">
@@ -14,11 +14,11 @@
                 </div>
             </div>
 
-            <div class="lg:flex hidden items-center gap-[46px]">
+            <div class="lg:flex hidden items-center gap-[2.875rem]">
                 <NuxtLink class="font-compact font-medium text-txt text-sm" to="/">
                     Eng
                 </NuxtLink>
-                <NuxtLink class="font-wide font-bold text-white text-xs uppercase py-[14px] px-[18px] rounded-2xl bg-brand" to="/">
+                <NuxtLink class="font-wide font-bold text-white text-xs uppercase py-[0.875rem] px-[1.125rem] rounded-2xl bg-brand" to="/">
                     Войти
                 </NuxtLink>
             </div>
